@@ -38,7 +38,7 @@ st.markdown("""
 # --- SIDEBAR ---
 with st.sidebar:
     st.title("🛍️ Myntra Analytics")
-    st.image("https://upload.wikimedia.org/wikipedia/commons/d/d5/Myntra_logo.png", width=100)
+    st.image("https://upload.wikimedia.org/wikipedia/commons/b/bc/Myntra_Logo.png", width=100)
     st.divider()
     clean_df, rfm_df = load_data()
     
@@ -68,7 +68,7 @@ with tab1:
     
     st.subheader("Revenue Trend")
     if PLOTLY_AVAILABLE:
-        rev_trend = filtered_df.resample('M', on='order_purchase_timestamp')['order_revenue'].sum().reset_index()
+        rev_trend = filtered_df.resample('ME', on='order_purchase_timestamp')['order_revenue'].sum().reset_index()
         fig = px.line(rev_trend, x='order_purchase_timestamp', y='order_revenue', color_discrete_sequence=['#FF3E6C'])
         st.plotly_chart(fig, use_container_width=True)
     else:
