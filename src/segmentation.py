@@ -73,7 +73,7 @@ def perform_segmentation():
         fig = px.scatter_3d(rfm, x='Recency', y='Frequency', z='Monetary', color='Segment', title="Customer Segments 3D")
         fig.write_html(OUTPUTS_FIGS / 'fig_09_3d_segments.html')
     else:
-        print("⚠️ Plotly not available, skipping 3D chart...")
+        print("[WARN] Plotly not available, skipping 3D chart...")
     
     # PART F - Export
     rfm.to_csv(DATA_PROCESSED / 'rfm_segments.csv')
