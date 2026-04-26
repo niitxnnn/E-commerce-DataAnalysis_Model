@@ -86,4 +86,3 @@ anal_Model/
    ```
 
 ---
-*Created by Antigravity AI for the Myntra Case Study Challenge.*
